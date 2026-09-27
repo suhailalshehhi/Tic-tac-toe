@@ -1,4 +1,4 @@
-//#include <iostream>
+#include <iostream>
 using namespace std;
 
 char board[9] = {'1','2','3','4','5','6','7','8','9'};
@@ -14,5 +14,5 @@ cout << board[6] << " | " << board[7] << " | " << board[8] << "\n";
 int main() {
 printBoard();
 return 0;
-}Tic tac toe game- work in progress
+
 //add board setup and print function
