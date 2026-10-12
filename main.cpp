@@ -19,7 +19,12 @@ return true;
 return false;
 }
 
-int main() {
+void resetBoard() {
+for (int i = 0; i < 9; i++) board[i] = '1' + i;
+}
+
+void playGame() {
+resetBoard();
 char player = 'X';
 for (int turn = 0; turn < 9; turn++) {
 printBoard();
@@ -37,12 +42,23 @@ board[move-1] = player;
 if (checkWin(player)) {
 printBoard();
 cout << "Player " << player << " wins!\n";
-return 0;
+return;
 }
 player = (player == 'X') ? 'O' : 'X';
 }
 printBoard();
 cout << "It's a draw!\n";
+}
+
+// TODO (next session): add a score tracker across games
+// (count wins for X, O, and draws, and print the totals after each round)
+int main() {
+char again;
+do {
+playGame();
+cout << "Play again? (y/n): ";
+cin >> again;
+} while (again == 'y' || again == 'Y');
 return 0;
 }
 
