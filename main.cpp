@@ -61,5 +61,6 @@ cin >> again;
 } while (again == 'y' || again == 'Y');
 return 0;
 }
-
+// checks if the board is full or a move is valid
+// checks all row, columns, and diagonals for a winner
 
